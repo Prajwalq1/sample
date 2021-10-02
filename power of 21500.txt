@@ -1,0 +1,28 @@
+8. 215 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
+   What is the sum of the digits of the number 21000?
+
+
+package com.hcl;
+import java.math.BigInteger;
+
+public class SumOfTheDigits {
+	 public static void main(String[]args)
+	 {
+		  BigInteger mul=new BigInteger("1");
+		  BigInteger bg=new BigInteger("2");
+		  
+		  for (int i = 0; i < 1000; i++) {
+		   mul=mul.multiply(bg);
+		  }
+		  
+		  int sum=0;
+		  String text=mul.toString();
+		  for (int i = 0; i < text.length(); i++)
+		  {
+		   sum+=Integer.parseInt(new Character(text.charAt(i)).toString());
+		  }
+		  System.out.println("Sum of the digits of 21500 is "+sum);
+		 }
+
+}
+Output :-Sum of the digits of 21500 is 1366.

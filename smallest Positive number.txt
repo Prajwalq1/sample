@@ -1,0 +1,39 @@
+6.   2520 is the smallest number that can be divided by each of the numbers from 1 to 10
+     without any remainder.
+     what is the smallest positive number that is 
+     evenly divisible by all of the numbers from 1 to 20?
+
+:-  package com.hcl;
+
+public class SmallestPositiveNumber {
+	
+		 
+		static long gcd(long a, long b)
+		{
+		   if(a%b != 0)
+		      return gcd(b,a%b);
+		   else
+		      return b;
+		}
+		 
+		
+		static long lcm(long n)
+		{
+		    long ans = 1;   
+		    for (long i = 1; i <= n; i++)
+		        ans = (ans * i)/(gcd(ans, i));
+		    return ans;
+
+}
+		public static void main(String []args)
+		{ //long n;
+			//Scanner sc=new Scanner(System.in);
+		//System.out.println("Enter the range of numbers from 1 to");
+		//n=sc.nextlong();
+		   long n = 20;
+		    System.out.println("the smallest positive number that is evenly divisible by all of the numbers from 1 to 20 is "+lcm(n));
+		 
+		}
+		}
+
+output :-The smallest positive number that is evenly divisible by all of the numbers from 1 to 20 is 232792560.
