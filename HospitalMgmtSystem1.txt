@@ -1,0 +1,288 @@
+//registration class//
+package abstractdemo;
+
+public class Registration {
+	private String name;
+	private String lastname;
+	private String password;
+	private String username;
+	public Registration(String name, String lastname, String password,String username) {
+		
+		this.name = name;
+		this.lastname = lastname;
+		this.password = password;
+		this.username=username;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getLastname() {
+		return lastname;
+	}
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+//patient class//
+package abstractdemo;
+import java.util.Scanner;
+
+public class Patient {
+	
+	private String name;
+	private int age;
+	private String location;
+	private String emailid;
+	private long phoneNo;
+	private String password;
+	
+	public Patient() {
+		
+	}
+	public Patient(String name,int age,String location,String emailid,long phoneNo,String password) {
+		
+		this.name = name;
+		this.age = age;
+		this.location = location;
+		this.emailid = emailid;
+		this.phoneNo = phoneNo;
+		this.password=password;
+	}
+	
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	public String getEmailid() {
+		return emailid;
+	}
+	public void setEmailid(String emailid) {
+		this.emailid = emailid;
+	}
+	public long getPhoneNo() {
+		return phoneNo;
+	}
+public void setPhoneNo(long phoneNo) {
+	this.phoneNo=phoneNo;
+}
+public String getPassword() {
+	return password;
+}
+public void setPassword1(String password) {
+	this.password = password;
+}
+	public void display(Patient pd) {
+		 System.out.println("........Patient Details.........");
+		 System.out.println(" ");
+		 
+		System.out.println("Name : " +pd.getName());
+		 System.out.println("Age : " +pd.getAge());
+		 System.out.println("Location:"+pd.getLocation());
+		 System.out.println("Email_id : " +pd.getEmailid());
+		 System.out.println("Phone_No : " +pd.getPhoneNo());
+		 System.out.println("Password :"+pd.getPassword());
+
+	}
+	
+		// TODO Auto-generated method stub
+		
+	}
+//doctor class//
+package abstractdemo;
+
+public class Doctor {
+	
+        private String username;
+	private String password;
+	public Doctor() {
+		this.username = username;
+		this.password = password;
+	}
+	
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
+	
+
+}
+//output for doctor registration and login//
+Enter the first name
+sadhu
+Enter the last name 
+bhavani
+Enter the username
+sadhubhavani
+Enter the password
+12345
+Account created succesfully
+
+Enter your choice
+
+1
+2
+1
+Enter username
+sadhubhavani
+Enter password
+12345
+Login as a doctor
+Thanks for login
+//output for patient login//
+Enter the first name
+sadhu
+Enter the last name 
+bhavani
+Enter the username
+sadhubhavani
+Enter the password
+12345
+Account created succesfully
+
+Enter your choice
+
+1
+2
+2
+Enter username
+sadhubhavani
+Enter password
+12345
+Login as a patient
+
+Enter Name :
+bhavani
+Enter Age :
+21
+Enter the location :
+hyd
+Enter Email_id :
+sadhubhavani
+Enter Phone_No :
+9182384661
+  
+ 1. Online Doctor Consultation :
+ 2. Online theraphy :
+Which are the services are you looking for : 
+1
+In online doctor consultation we have these types :
+1.Need a general checkup
+2.need a prescribtion of any disease
+
+Enter your choice :
+1
+Enter the illness type:
+mild symptoms of cold
+Enter the type of medicine u used earlier :
+paracetamol.
+Thankyou 
+//case 2//
+Enter the first name
+sadhu
+Enter the last name 
+bhavani
+Enter the username
+sadhubhavani
+Enter the password
+12345
+Account created succesfully
+
+Enter your choice
+
+1
+2
+2
+Enter username
+sadhubhavani
+Enter password
+12345
+Login as a patient
+
+Enter Name :
+bhavani
+Enter Age :
+21
+Enter the location :
+hyd
+Enter Email_id :
+sadhubhavani
+Enter Phone_No :
+9182384661
+  
+ 1. Online Doctor Consultation :
+ 2. Online theraphy :
+Which are the services are you looking for : 
+2
+In theraphy we have these specialists : 
+1. physiotherpist
+2. dentist
+3. child specialist
+Enter your choice : 
+1
+Enter illness type :
+legpains
+Enter timings : 
+5
+
+ your Appointment is fixed
+
+
+
+
+
+	
+
+	
+
+	
+	
+	
+	  
+	
+	
+	
+	
+	
+	
+	
+	
+	
+

@@ -1,0 +1,153 @@
+package abstractdemo;
+import java.math.BigInteger;
+import java.util.Scanner;
+import java.lang.annotation.*;
+import java.util.stream.*;
+
+
+
+import ebox.Equalsmethod;
+
+public class Hospital {
+public static void main(String[] args) {  
+		Scanner sc=new Scanner(System.in);
+		Registration rd=new Registration(null, null, null,null);
+		 
+		  System.out.println("Enter the first name");
+		  rd.setName(sc.next());
+		  System.out.println("Enter the last name ");
+		  rd.setLastname(sc.next());
+		  System.out.println("Enter the username");
+		  rd.setUsername(sc.next());
+		  System.out.println("Enter the password");
+		  rd.setPassword(sc.next());
+		  System.out.println("Account created succesfully");
+		  System.out.println("");
+		 
+		  try {
+			 System.out.println("Enter your choice\n\n1\n2");
+				int ch=sc.nextInt();
+				switch(ch) {
+				case 1:
+					Doctor dr=new Doctor();
+					System.out.println("Enter username");
+					dr.setUsername(sc.next());
+					System.out.println("Enter password");
+					dr.setPassword(sc.next());
+			  if(rd.getUsername().equals(dr.getUsername())&& rd.getPassword().equals(dr.getPassword())) {
+					 System.out.println("Login as a doctor");
+					System.out.println("Thanks for login");
+					break;
+					}
+				else {
+					System.out.println("Invalid login credientials");
+					}
+				
+				case 2:
+					Patient pd=new Patient();
+					System.out.println("Enter username");
+					pd.setEmailid(sc.next());
+					System.out.println("Enter password");
+					pd.setPassword1(sc.next());
+				if(rd.getUsername().equals(pd.getEmailid()) && rd.getPassword().equals(pd.getPassword())){
+					
+					System.out.println("Login as a patient");
+					System.out.println("");
+					System.out.println("Enter Name :" );
+					  String  name=sc.next();
+					  System.out.println("Enter Age :" );
+					   int  age=sc.nextInt();
+					   System.out.println("Enter the location :");
+					    String location=sc.next();
+					   System.out.println("Enter Email_id :" );
+					  String  emailid=sc.next();
+					  System.out.println("Enter Phone_No :" );
+					  long  phoneNo=sc.nextLong();
+					  
+			      Scanner sc1=new Scanner(System.in);
+				  System.out.println("  ");
+				  System.out.println(" 1. Online Doctor Consultation :");
+				  System.out.println(" 2. Online theraphy :");
+				  System.out.println("Which are the services are you looking for : ");
+				        int c;
+				        c=sc1.nextInt();
+				 switch(c)
+				         {
+				 case 1: System.out.println("In online doctor consultation we have these types :");
+				 System.out.println("1.Need a general checkup\n2.need a prescribtion of any disease\n");
+				 System.out.println("Enter your choice :");
+				 ch=sc1.nextInt();
+				 switch(c) {
+				 case 1:
+				 System.out.println("Enter the illness type:");
+				 String str12=sc.next();
+				 System.out.println("Enter the type of medicine u used earlier :");
+				 String st1=sc.next();
+				 System.out.println("Thankyou ");
+				 break;
+				 case 2:
+				 System.out.println("explain the disease that u have faced recently so that i will give medicnes");
+				 String st=sc.next();
+				 System.out.println("You will get a best medicines thank you for consulting our hospital");
+				 }
+				                   break;
+				case 2: System.out.println("In theraphy we have these specialists : ");
+				System.out.println("1. physiotherpist\n2. dentist\n3. child specialist");
+				     System.out.println("Enter your choice : ");
+				       ch=sc1.nextInt();
+				          switch(c)
+				           {
+				      case 1: 
+				       System.out.println("Enter illness type " );
+				          String str1=sc1.next();
+				         System.out.println("Enter timings ");
+				          int str2=sc1.nextInt();
+				    System.out.println("Appointment is fixed");
+				   break;
+				       case 2:              
+				      System.out.println("Enter illness type :" );
+				   String str5=sc1.next();
+				      System.out.println("Enter timings ");
+				      int str6=sc1.nextInt();
+				   System.out.println(" your Appointment is fixed");
+				   break;
+				   
+				      case 3:                         
+				   System.out.println("Enter illness type :" );
+				      String str7=sc1.next();
+				 System.out.println("Enter timings");
+				 int str3=sc1.nextInt();
+				System.out.println("Appointment fixed  ");
+				 break;
+				           }}}
+				           
+				  else {
+				System.out.println("Invalid login Credentials");
+				System.out.println("1.sign up\n2.forgot password");
+				System.out.println("Choose one option");
+				int a=sc.nextInt();
+				int c=sc.nextInt();
+				switch(c) {
+				case 1:
+					System.out.println("Enter the username\n Enter the password");
+					String st4=sc.next();
+					System.out.println("Enter the verification code");
+					int b=sc.nextInt();
+					System.out.println("Enter to login page");
+					break;
+				case 2:
+				System.out.println("Enter the recent password: ");
+				String st3=sc.next();
+				System.out.println("Enter the verification code");
+				int a1=sc.nextInt();
+				System.out.println("You will be able to login into that system");
+				break;
+				}}}}
+				
+		
+		 catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} }}
+		 
+		 
